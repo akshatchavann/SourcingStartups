@@ -1,0 +1,21 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+# Configure Chrome to run in headless mode
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
+
+# Set the path to the Chromedriver executable
+chromedriver_path = "/path/to/chromedriver"
+
+# Create the headless Chrome browser
+browser = webdriver.Chrome(executable_path=chromedriver_path, chrome_options=chrome_options)
+
+# Use the browser to navigate to a webpage
+browser.get("https://www.example.com")
+
+# Do some scraping or other automation here...
+
+# Close the browser when finished
+browser.quit()
