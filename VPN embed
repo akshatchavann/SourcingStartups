@@ -1,0 +1,18 @@
+
+#VPN CHANGES IP
+
+config_file_path = "/path/to/config.ovpn"
+openvpn_command = "openvpn"
+credentials_file_path = "/path/to/credentials.txt"
+username = "myusername"
+password = "mypassword"
+
+while True:
+    os.system("sudo pkill openvpn")
+
+    if credentials_file_path:
+        with open(credentials_file_path, "w") as f:
+            f.write(f"{username}\n{password}")
+
+    os.system(f"sudo {openvpn_command} --config {config_file_path} --auth-user-pass {credentials_file_path}")
+    time.sleep(10)
