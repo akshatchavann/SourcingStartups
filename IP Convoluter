@@ -1,0 +1,41 @@
+import requests
+import pandas as pd
+from requests_html import HTML
+from requests_html import HTMLSession
+
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+
+import requests
+from bs4 import BeautifulSoup
+import colorama
+
+from selenium.webdriver import Chrome, ChromeOptions
+
+from bs4 import BeautifulSoup
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.chrome.options import Options
+from fake_useragent import UserAgent
+
+from selenium.webdriver.common.keys import Keys
+
+import time
+from datetime import datetime
+
+import streamlit as st
+
+
+##CREAT FAKE USER PROFILE
+def create_fake_useragent():
+    ua = UserAgent()
+    userAgent = ua.random
+    return(userAgent)
+    
+    
+    import os
+
+
